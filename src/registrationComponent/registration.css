@@ -1,0 +1,161 @@
+form {
+    display: grid;
+    -ms-display: grid;
+    grid-template-columns: 341px;
+    grid-template-rows: 38px;
+    grid-row-gap: 10px;
+    position: absolute;
+
+}
+input {
+    position: absolute;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+    background: #32B381;
+    border-radius: 20px;
+    color: #FFFFFF;
+    height: 38px;
+    width: 341px;
+    left: 53px;
+
+}
+::placeholder{
+    color: white;
+}
+#name {
+    top: 83px;
+}
+#lastName {
+    top: 131px;
+}
+#phone {
+    top: 179px;
+}
+#email{
+    top: 227px;
+}
+
+button{
+    position: absolute;
+    width: 341px;
+    height: 38px;
+    left: 474px;
+    top: 475px;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+
+    color: #F2F2F2;
+
+    background: #32B381;
+    border-radius: 20px;
+}
+
+select {
+    position: absolute;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+    background: #32B381;
+    border-radius: 20px;
+    color: #FFFFFF;
+    height: 44px;
+    width: 365px;
+    left: 54px;
+}
+
+#university{
+    /*width: 361px;*/
+    top: 273.94px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+#departments{
+    top: 325px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+#gradYear{
+    top: 375px;
+}
+#experience{
+    top: 420px;
+}
+.hobby{
+    position: absolute;
+    width: 774px;
+    height: 182px;
+    left: 443px;
+    top: 83px;
+
+    background: #32B482;
+    border-radius: 20px;
+}
+.text{
+    margin-top: 55px;
+    width: 125px;
+    height: 182px;
+    left: 544px;
+    top: 177px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+#hobby{
+    position: absolute;
+    width: 620px;
+    height: 158px;
+    left: 140px;
+    top: 15px;
+    border-radius: 0px 20px 20px 0px;
+    border: none;
+    resize: none;
+    background: #32B482;
+}
+.reason{
+    position: absolute;
+    width: 774px;
+    height: 182px;
+    left: 443px;
+    top: 274px;
+
+    background: #32B482;
+    border-radius: 20px;
+}
+#reason{
+    position: absolute;
+    width: 620px;
+    height: 158px;
+    left: 140px;
+    top: 10px;
+    border-radius: 0px 20px 20px 0px;
+    border: none;
+    resize: none;
+    background: #32B482;
+}
+
+input[type="date"].full:before {
+    color:black;
+    content:"Год вы"!important;
+}
