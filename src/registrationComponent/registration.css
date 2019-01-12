@@ -1,161 +1,104 @@
-form {
-    display: grid;
-    -ms-display: grid;
-    grid-template-columns: 341px;
-    grid-template-rows: 38px;
-    grid-row-gap: 10px;
-    position: absolute;
-
-}
-input {
-    position: absolute;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 18px;
-    text-align: left;
-    padding-left: 20px;
-    background: #32B381;
-    border-radius: 20px;
-    color: #FFFFFF;
-    height: 38px;
-    width: 341px;
-    left: 53px;
-
-}
 ::placeholder{
     color: white;
 }
-#name {
-    top: 83px;
+.inputA{
+    position: absolute;
+    width: 27%;
+    height: 70%;
+    left: 4.5%;
+    top: 15.5%;
 }
-#lastName {
-    top: 131px;
+.inputB{
+    position: absolute;
+    width: 61%;
+    height: 70%;
+    top: 15.5%;
+    left: 35%;
 }
-#phone {
-    top: 179px;
+input{
+    position: relative;
+    width: 95%;
+    height: 10%;
+    margin-bottom: 2.1%;
+    display: flex;
+    background: #32B482;
+    border-radius: 20px;
+    border: none;
+    font-family: Open Sans, serif;
+    font-size: 18px;
+    padding-left: 5%;
+    color: #FFFFFF;
 }
-#email{
-    top: 227px;
+select{
+    position: relative;
+    width: 100%;
+    height: 10.5%;
+    margin-bottom: 2.5%;
+    display: flex;
+    background: #32B482;
+    border-radius: 20px;
+    border: none;
+    font-family: Open Sans, serif;
+    font-size: 18px;
+    padding-left: 5%;
+    color: #FFFFFF;
 }
-
 button{
     position: absolute;
-    width: 341px;
-    height: 38px;
-    left: 474px;
-    top: 475px;
-
-    font-family: Open Sans;
-    font-style: normal;
+    width: 26.8%;
+    height: 7%;
+    left: 37.3%;
+    top: 90%;
+    font-family: Open Sans, serif;
     font-weight: 600;
-    line-height: normal;
+    border: none;
     font-size: 18px;
     text-align: center;
-
     color: #F2F2F2;
-
     background: #32B381;
     border-radius: 20px;
-}
-
-select {
-    position: absolute;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 18px;
-    text-align: left;
-    padding-left: 20px;
-    background: #32B381;
-    border-radius: 20px;
-    color: #FFFFFF;
-    height: 44px;
-    width: 365px;
-    left: 54px;
-}
-
-#university{
-    /*width: 361px;*/
-    top: 273.94px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-#departments{
-    top: 325px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-#gradYear{
-    top: 375px;
-}
-#experience{
-    top: 420px;
 }
 .hobby{
-    position: absolute;
-    width: 774px;
-    height: 182px;
-    left: 443px;
-    top: 83px;
-
     background: #32B482;
-    border-radius: 20px;
-}
-.text{
-    margin-top: 55px;
-    width: 125px;
-    height: 182px;
-    left: 544px;
-    top: 177px;
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 18px;
-    text-align: center;
-    vertical-align: middle;
-    color: #FFFFFF;
-}
-
-#hobby{
+    width: 100%;
+    height: 50%;
+    border-radius: 35px;
     position: absolute;
-    width: 620px;
-    height: 158px;
-    left: 140px;
-    top: 15px;
-    border-radius: 0px 20px 20px 0px;
-    border: none;
-    resize: none;
-    background: #32B482;
 }
 .reason{
-    position: absolute;
-    width: 774px;
-    height: 182px;
-    left: 443px;
-    top: 274px;
-
     background: #32B482;
-    border-radius: 20px;
-}
-#reason{
+    width: 100%;
+    height: 49%;
+    top: 51%;
+    border-radius: 35px;
     position: absolute;
-    width: 620px;
-    height: 158px;
-    left: 140px;
-    top: 10px;
-    border-radius: 0px 20px 20px 0px;
-    border: none;
+}
+textarea{
+    position: absolute;
+    width: 70%;
+    left: 27%;
+    margin-top: 3%;
+    height: 72%;
     resize: none;
+    border: none;
     background: #32B482;
+    color: white;
+    font-size: 15px;
+}
+.text{
+    position: absolute;
+    width: 23%;
+    left: 2%;
+    margin-top: 5%;
+    text-align: center;
+    color: white;
+}
+@media screen and (width: 1024px){
+    .inputA{
+        top: 16.5%;
+    }
 }
 
-input[type="date"].full:before {
-    color:black;
-    content:"Год вы"!important;
+@media screen and (max-width: 1024px){
+
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./registrationComponent/registration.css"
+import "./registration.css"
 
 
 class RegistrationForm extends Component {
@@ -38,10 +38,11 @@ class RegistrationForm extends Component {
         postt.append('department', this.state.department);
         postt.append('university', this.state.university);
         postt.append('name', this.state.name);
-        postt.append('surname', this.state.lastName);
+        postt.append('surname', this.state.surname);
         postt.append('email', this.state.email);
         postt.append('phone', this.state.phone);
         postt.append('grad_year', this.state.gradYear);
+        postt.append('experience', this.state.experience);
         postt.append('hobby', this.state.hobby);
         postt.append('reason', this.state.reason);
 
@@ -49,7 +50,7 @@ class RegistrationForm extends Component {
             method: 'POST', // or 'PUT'
             body: postt, // data can be `string` or {object}!
         }).then((e)=>{
-            if(e.ok) alert(`Success`);
+            if(e.ok) alert(`Форма успешно отправленна ^_^`);
             else alert("Ошибка при отправке", e)
         });
     }
@@ -67,8 +68,8 @@ class RegistrationForm extends Component {
         this.setState({phone: event.target.value})
     }
     handleSurnameChange(event){
-        console.log('Last Name was changed', event.target.value);
-        this.setState({lastName: event.target.value})
+        console.log('Surname was changed', event.target.value);
+        this.setState({surname: event.target.value})
     }
     handleUniversityChange(event){
         console.log('University was changed', event.target.value);
@@ -79,121 +80,106 @@ class RegistrationForm extends Component {
         this.setState({department: event.target.value});
     }
     handleGradYearChange(event){
-        console.log('Department was changed', event.target.value);
+        console.log('Grad year was changed', event.target.value);
         this.setState({gradYear: event.target.value});
     }
     handleExperienceChange(event){
-        console.log('Department was changed', event.target.value);
+        console.log('Experience was changed', event.target.value);
         this.setState({experience: event.target.value});
     }
     handleHobbyChange(event){
-        console.log('Department was changed', event.target.value);
+        console.log('Hobby was changed', event.target.value);
         this.setState({hobby: event.target.value});
     }
     handleReasonChange(event){
-        console.log('Department was changed', event.target.value);
+        console.log('Reason was changed', event.target.value);
         this.setState({reason: event.target.value});
     }
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input id="name"
-                    type = "text"
-                    name = "Name"
-                    placeholder="Имя"
-                    value={this.state.name}
-                    onChange={this.handleNameChange}
-                />
-                <input id="lastName"
-                    type = "text"
-                    name = "surname"
-                    placeholder="Фамилия"
-                    value={this.state.lastName}
-                    onChange={this.handleSurnameChange}
-                />
-                <input id="phone"
-                    type="tel"
-                    name = "phone"
-                    maxLength={18}
-                    minLength={10}
-                    placeholder="+996123456789"
 
-                    value={this.state.phone}
-                    onChange={this.handlePhoneChange}
-                />
-                <input id="email"
-                    type="text"
-                    name = "Email"
-                    placeholder="E-mail"
-                    value={this.state.email}
-                    onChange={this.handleEmailChange}
-                />
-                <select id ="university" onChange={this.handleUniversityChange} value={this.state.value}>
-                </select>
+                <div className="inputA">
+                     <input id="name"
+                            type = "text"
+                            name = "Name"
+                            placeholder="Имя"
+                            value={this.state.name}
+                            onChange={this.handleNameChange}
+                     />
+                     <input id="surname"
+                            type = "text"
+                            name = "surname"
+                            placeholder="Фамилия"
+                            value={this.state.surname}
+                            onChange={this.handleSurnameChange}
+                     />
+                     <input id="phone"
+                            type="tel"
+                            name = "phone"
+                            maxLength={18}
+                            minLength={10}
+                            placeholder="+996123456789"
 
-                <select id ="departments" onChange={this.handleDepartmentChange} value={this.state.value}>
-                </select>
+                            value={this.state.phone}
+                            onChange={this.handlePhoneChange}
+                     />
+                     <input id="email"
+                            type="text"
+                            name = "Email"
+                            placeholder="E-mail"
+                            value={this.state.email}
+                            onChange={this.handleEmailChange}
+                     />
+                     <select id ="university" onChange={this.handleUniversityChange} value={this.state.value}>
+                     </select>
 
-                <input id="gradYear"
-                       type="date"
-                       name = "gradYear"
-                       placeholder="Год выпуска"
-                       value={this.state.gradYear}
-                       onChange={this.handleGradYearChange}
-                />
-                <input id="experience"
-                       type="number"
-                       name = "experience"
-                       placeholder="Стаж"
-                       value={this.state.experience}
-                       onChange={this.handleExperienceChange}
-                />
-                <div className="hobby">
-                    <div className="text">
-                        <p>Расскажите о себе (хобби, спорт)</p>
-                    </div>
-                    <textarea id="hobby"
-                           type="text"
-                           name = "hobby"
-                           value={this.state.hobby}
-                           onChange={this.handleHobbyChange}
-                    />
-                </div>
-                <div className="reason">
-                    <div className="text">
-                        <p>Расскажите почему вы хотите быть частью Neobis</p>
-                    </div>
-                    <textarea id="reason"
-                              type="text"
-                              name = "reason"
-                              value={this.state.reason}
-                              onChange={this.handleReasonChange}
-                    />
+                     <select id ="departments" onChange={this.handleDepartmentChange} value={this.state.value}>
+                     </select>
+
+                     <input id="gradYear"
+                            type="text"
+                            name = "gradYear"
+                            placeholder="Год выпуска"
+                            value={this.state.gradYear}
+                            onChange={this.handleGradYearChange}
+                     />
+                     <input id="experience"
+                            type="number"
+                            name = "experience"
+                            placeholder="Стаж"
+                            value={this.state.experience}
+                            onChange={this.handleExperienceChange}
+                     />
                 </div>
 
-
-
-
-
-
-
-
-                {/*<input id="reason"*/}
-
-                       {/*type="text"*/}
-                       {/*name = "reason"*/}
-                       {/*value={this.state.reason}*/}
-                       {/*onChange={this.handleReasonChange}*/}
-                {/*/>*/}
+                <div className="inputB">
+                    <div className="hobby">
+                        <div className="text">
+                            <p>Расскажите о себе (хобби, спорт)</p>
+                        </div>
+                        <textarea id="hobby"
+                                  type="text"
+                                  name = "hobby"
+                                  value={this.state.hobby}
+                                  onChange={this.handleHobbyChange}
+                        />
+                    </div>
+                    <div className="reason">
+                        <div className="text">
+                            <p>Расскажите почему вы хотите быть частью Neobis</p>
+                        </div>
+                        <textarea id="reason"
+                                  type="text"
+                                  name = "reason"
+                                  value={this.state.reason}
+                                  onChange={this.handleReasonChange}
+                        />
+                    </div>
+                </div>
 
                 <button>Зарегистрироваться</button>
-
-
-
-
-
-
 
             </form>
 
@@ -223,7 +209,7 @@ fetch('http://46.101.236.211:1234/registration/values/', {
             let Id = (parseInt(i, 10));
             newItem.value = Id + 1;
 
-            // console.log(arr.universities[i].name); // output university name
+            // console.log(arr.departments[i].name); // output university name
             departmentParent.appendChild(newItem);
         }
 

@@ -1,52 +1,60 @@
-.App {
-  text-align: center;
-}
+@media screen and (max-width: 1440px){
+    .container {
+        position: absolute;
+        width: 80%;
+        height: 85%;
+        left: 5%;
+        top: 7.5%;
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+        background: #F2F2F2;
+        border-radius: 20px;
+        /*max-width: 1340px;*/
+    }
 }
 .box{
-    position: absolute;
-    width: 1340px;
-    height: 620px;
-    left: 50px;
-    top: 55px;
+    position: fixed;
+    width: 95%;
+    height: 85%;
+    left: 3%;
+    top: 7.5%;
 
     background: #444A52;
     border-radius: 20px;
+    /*max-width: 1340px;*/
+    max-height: 620px;
 }
 .container {
     position: absolute;
-    width: 1270px;
-    height: 531px;
-    left: 35px;
-    top: 44px;
+    width: 94%;
+    height: 85%;
+    left: 3%;
+    top: 7.5%;
 
     background: #F2F2F2;
     border-radius: 20px;
+    /*max-width: 1340px;*/
+}
+h1{
+    font-family: Open Sans, serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 24px;
+    text-align: center;
+    color: #333333;
+    position: absolute;
+    width: 30%;
+    height: 5.5%;
+    left: 35%;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .box{
+        height: 512px;
+    }
+    .container{
+        top: 7.5%;
+        height: 85%;
+    }
 }
