@@ -41,7 +41,7 @@ select{
     font-family: Open Sans, serif;
     font-size: 18px;
     padding-left: 5%;
-    color: #FFFFFF;
+    color: white;
 }
 button{
     position: absolute;
@@ -62,7 +62,7 @@ button{
     background: #32B482;
     width: 100%;
     height: 50%;
-    border-radius: 35px;
+    border-radius: 20px;
     position: absolute;
 }
 .reason{
@@ -70,7 +70,7 @@ button{
     width: 100%;
     height: 49%;
     top: 51%;
-    border-radius: 35px;
+    border-radius: 20px;
     position: absolute;
 }
 textarea{
@@ -92,13 +92,103 @@ textarea{
     margin-top: 5%;
     text-align: center;
     color: white;
+    font-size: 18px;
 }
 @media screen and (width: 1024px){
     .inputA{
         top: 16.5%;
     }
+    button{
+        font-size: 16px;
+    }
+    input{
+        font-size: 16px;
+    }
+    select{
+        font-size: 16px;
+        padding-left: 3%;
+    }
 }
-
 @media screen and (max-width: 1024px){
-
+    .inputA{
+        top: 16%;
+    }
+    button{
+        font-size: 14px;
+    }
+    input{
+        font-size: 14px;
+    }
+    select{
+        font-size: 14px;
+        padding-left: 5%;
+    }
+    .text{
+        font-size: 14px;
+    }
 }
+@media screen and (max-width: 786px) {
+    input{
+        font-size: 9px;
+    }
+    select{
+        font-size: 9px;
+    }
+    .text{
+        font-size: 9px;
+    }
+    button{
+        font-size: 12px;
+    }
+    .hobby{
+        border-radius: 20px;
+    }
+    .reason{
+        border-radius: 20px;
+    }
+    .inputA{
+        top: 15%;
+    }
+}
+@media screen and (max-width: 425px){
+    .text{
+        font-size: 5px;
+    }
+    input{
+        top: 2%;
+        font-size: 5px;
+        height: 7%;
+        padding-top: 2px;
+        border-radius: 3px;
+    }
+    button{
+        font-size: 5px;
+    }
+    select{
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        font-size: 5px;
+        padding-top: 2px;
+        height: 9%;
+        border-radius: 3px;
+        width: 100%;
+        top: 2%;
+    }
+    .hobby{
+        border-radius: 3px;
+    }
+    .reason{
+        border-radius: 3px;
+    }
+    .inputA{
+        top: 19%;
+    }
+    @media not all and (min-resolution:.001dpcm) {
+        @supports (-webkit-appearance:none)  {
+            select { width: 102.5%; height: 10% }
+        }
+    }
+}
+
+

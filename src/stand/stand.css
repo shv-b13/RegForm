@@ -1,0 +1,78 @@
+.b0{
+    position: absolute;
+    width: 18.6%;
+    top: 95.3%;
+    left: 41%;
+    height: 22%;
+    display: inline-block;
+}
+.btns {
+    position: absolute;
+    display: inline-block;
+    list-style-type: none;
+    z-index: 2;
+    width: 13.5%;
+    height: 8%;
+    background: rgba(0, 0, 0, 0.25);
+}
+#i2{
+    margin-left: 21.5%;
+}
+#i3{
+    margin-left: 43%;
+}
+#i4{
+    margin-left: 64.5%;
+}
+#i5{
+    margin-left: 86%;
+}
+.b1{
+    position: absolute;
+    width: 19.5%;
+    height: 15%;
+    top: 95%;
+    left: 40.5%;
+    z-index: 1;
+    background: rgba(68, 74, 82, 0.91);
+}
+.b2{
+    position: absolute;
+    width: 61%;
+    height: 12%;
+    left: 19.5%;
+    top: 110%;
+    z-index: 2;
+    background: #535860;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width: 1024px){
+    .b2{
+        width: 66%;
+        height: 10%;
+        left: 17%;
+        top: 108%;
+    }
+}
+@media screen and (max-width: 786px) {
+.b2{
+    left: 17%;
+    width: 66%;
+    height: 10%;
+    top: 108%;
+}
+}
+@media screen and (max-width: 425px) {
+    .b2{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+        height: 9%;
+        width: 65%;
+        left: 17.5%;
+    }
+    .b1{
+        background: rgba(68, 74, 82, 0.91);
+        border-radius: 3px;
+        height: 16%;
+    }
+}

@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import "./registration.css"
 
+const url = "http://46.101.236.211:1234/";
+
 
 class RegistrationForm extends Component {
+
     constructor(props){
         super(props);
         this.state = {
@@ -16,7 +19,6 @@ class RegistrationForm extends Component {
             experience: '',
             hobby: '',
             reason: '',
-
         };
         this.handleEmailChange = this.handleEmailChange.bind(this);
         this.handleNameChange = this.handleNameChange.bind(this);
@@ -29,6 +31,13 @@ class RegistrationForm extends Component {
         this.handleExperienceChange = this.handleExperienceChange.bind(this);
         this.handleHobbyChange = this.handleHobbyChange.bind(this);
         this.handleReasonChange = this.handleReasonChange.bind(this);
+    }
+
+
+    validEmpty(event){
+        if(event.target.value.includes(null)){
+            alert('Поле ' + event.target.name +  ' не должно быть пустым');
+        }
     }
 
     handleSubmit(event) {
@@ -46,7 +55,7 @@ class RegistrationForm extends Component {
         postt.append('hobby', this.state.hobby);
         postt.append('reason', this.state.reason);
 
-        fetch(`http://46.101.236.211:1234/application/`, {
+        fetch(url + `application/`, {
             method: 'POST', // or 'PUT'
             body: postt, // data can be `string` or {object}!
         }).then((e)=>{
@@ -57,18 +66,22 @@ class RegistrationForm extends Component {
 
     handleEmailChange(event){
         console.log('E-mail was changed', event.target.value);
+        this.validEmpty(event);
         this.setState({email: event.target.value})
     }
     handleNameChange(event){
         console.log('Name was changed', event.target.value);
+        this.validEmpty(event);
         this.setState({name: event.target.value})
     }
     handlePhoneChange(event){
         console.log('Phone was changed', event.target.value);
+        this.validEmpty(event);
         this.setState({phone: event.target.value})
     }
     handleSurnameChange(event){
         console.log('Surname was changed', event.target.value);
+        this.validEmpty(event);
         this.setState({surname: event.target.value})
     }
     handleUniversityChange(event){
@@ -81,6 +94,7 @@ class RegistrationForm extends Component {
     }
     handleGradYearChange(event){
         console.log('Grad year was changed', event.target.value);
+        this.validEmpty(event);
         this.setState({gradYear: event.target.value});
     }
     handleExperienceChange(event){
@@ -89,10 +103,12 @@ class RegistrationForm extends Component {
     }
     handleHobbyChange(event){
         console.log('Hobby was changed', event.target.value);
+        this.validEmpty(event);
         this.setState({hobby: event.target.value});
     }
     handleReasonChange(event){
         console.log('Reason was changed', event.target.value);
+        this.validEmpty(event);
         this.setState({reason: event.target.value});
     }
 
@@ -105,50 +121,59 @@ class RegistrationForm extends Component {
                             type = "text"
                             name = "Name"
                             placeholder="Имя"
+                            required
+                            pattern="^[A-Za-zА-Яа-яЁё\s]{2,32}$"
                             value={this.state.name}
                             onChange={this.handleNameChange}
                      />
                      <input id="surname"
                             type = "text"
-                            name = "surname"
+                            name = "Surname"
                             placeholder="Фамилия"
+                            required
+                            pattern="^[A-Za-zА-Яа-яЁё\s]{2,32}$"
                             value={this.state.surname}
                             onChange={this.handleSurnameChange}
                      />
                      <input id="phone"
                             type="tel"
-                            name = "phone"
+                            name = "Phone"
+                            required
                             maxLength={18}
                             minLength={10}
                             placeholder="+996123456789"
-
                             value={this.state.phone}
                             onChange={this.handlePhoneChange}
                      />
                      <input id="email"
                             type="text"
                             name = "Email"
+                            required
                             placeholder="E-mail"
                             value={this.state.email}
                             onChange={this.handleEmailChange}
                      />
                      <select id ="university" onChange={this.handleUniversityChange} value={this.state.value}>
                      </select>
-
                      <select id ="departments" onChange={this.handleDepartmentChange} value={this.state.value}>
                      </select>
-
                      <input id="gradYear"
                             type="text"
-                            name = "gradYear"
-                            placeholder="Год выпуска"
+                            name = "Grad Year"
+                            required
+                            placeholder="Год выпуска (Год-месяц-число)"
+                            pattern="[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}"
                             value={this.state.gradYear}
                             onChange={this.handleGradYearChange}
                      />
                      <input id="experience"
                             type="number"
-                            name = "experience"
+                            name = "Experience"
                             placeholder="Стаж"
+                            min={0}
+                            max={20}
+                            required
+                            pattern="[0-9]{,2}"
                             value={this.state.experience}
                             onChange={this.handleExperienceChange}
                      />
@@ -162,6 +187,8 @@ class RegistrationForm extends Component {
                         <textarea id="hobby"
                                   type="text"
                                   name = "hobby"
+                                  required
+                                  min={10}
                                   value={this.state.hobby}
                                   onChange={this.handleHobbyChange}
                         />
@@ -173,6 +200,8 @@ class RegistrationForm extends Component {
                         <textarea id="reason"
                                   type="text"
                                   name = "reason"
+                                  requiredr
+                                  min={10}
                                   value={this.state.reason}
                                   onChange={this.handleReasonChange}
                         />
@@ -182,13 +211,12 @@ class RegistrationForm extends Component {
                 <button>Зарегистрироваться</button>
 
             </form>
-
         );
     }
 }
 
 
-fetch('http://46.101.236.211:1234/registration/values/', {
+fetch(url + 'registration/values/', {
     method: 'GET'
 }).then((data) => {
     if(data.ok) (data.json().then((arr) => {
