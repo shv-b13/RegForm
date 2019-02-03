@@ -34,11 +34,6 @@ class RegistrationForm extends Component {
     }
 
 
-    validEmpty(event){
-        if(event.target.value.includes(null)){
-            alert('Поле ' + event.target.name +  ' не должно быть пустым');
-        }
-    }
 
     handleSubmit(event) {
         event.preventDefault();
@@ -66,22 +61,18 @@ class RegistrationForm extends Component {
 
     handleEmailChange(event){
         console.log('E-mail was changed', event.target.value);
-        this.validEmpty(event);
         this.setState({email: event.target.value})
     }
     handleNameChange(event){
         console.log('Name was changed', event.target.value);
-        this.validEmpty(event);
         this.setState({name: event.target.value})
     }
     handlePhoneChange(event){
         console.log('Phone was changed', event.target.value);
-        this.validEmpty(event);
         this.setState({phone: event.target.value})
     }
     handleSurnameChange(event){
         console.log('Surname was changed', event.target.value);
-        this.validEmpty(event);
         this.setState({surname: event.target.value})
     }
     handleUniversityChange(event){
@@ -94,7 +85,6 @@ class RegistrationForm extends Component {
     }
     handleGradYearChange(event){
         console.log('Grad year was changed', event.target.value);
-        this.validEmpty(event);
         this.setState({gradYear: event.target.value});
     }
     handleExperienceChange(event){
@@ -103,12 +93,10 @@ class RegistrationForm extends Component {
     }
     handleHobbyChange(event){
         console.log('Hobby was changed', event.target.value);
-        this.validEmpty(event);
         this.setState({hobby: event.target.value});
     }
     handleReasonChange(event){
         console.log('Reason was changed', event.target.value);
-        this.validEmpty(event);
         this.setState({reason: event.target.value});
     }
 
@@ -139,14 +127,13 @@ class RegistrationForm extends Component {
                             type="tel"
                             name = "Phone"
                             required
-                            maxLength={18}
-                            minLength={10}
+                            pattern="\+[0-9]{12}"
                             placeholder="+996123456789"
                             value={this.state.phone}
                             onChange={this.handlePhoneChange}
                      />
                      <input id="email"
-                            type="text"
+                            type="email"
                             name = "Email"
                             required
                             placeholder="E-mail"
@@ -188,8 +175,7 @@ class RegistrationForm extends Component {
                                   type="text"
                                   name = "hobby"
                                   required
-                                  min={10}
-                                  value={this.state.hobby}
+                                  value={this.state.hobby.trim()}
                                   onChange={this.handleHobbyChange}
                         />
                     </div>
@@ -200,9 +186,8 @@ class RegistrationForm extends Component {
                         <textarea id="reason"
                                   type="text"
                                   name = "reason"
-                                  requiredr
-                                  min={10}
-                                  value={this.state.reason}
+                                  required
+                                  value={this.state.reason.trim()}
                                   onChange={this.handleReasonChange}
                         />
                     </div>
