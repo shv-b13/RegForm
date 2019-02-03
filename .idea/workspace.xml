@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f838c38-35c8-4d7d-b707-d24b80447055" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/logInComponent/Login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/registrationComponent/RegistrationForm.js" afterPath="$PROJECT_DIR$/src/registrationComponent/RegistrationForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/registrationComponent/registration.css" afterPath="$PROJECT_DIR$/src/registrationComponent/registration.css" />
-    </list>
+    <list default="true" id="8f838c38-35c8-4d7d-b707-d24b80447055" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -32,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -88,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegistrationForm.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RegistrationForm.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/registrationComponent/RegistrationForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+            <state relative-caret-position="226">
+              <caret line="76" column="19" lean-forward="true" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#2201#3386#0" expanded="false" />
@@ -246,6 +238,12 @@
               <item name="register_form" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="register_form" type="b2602c69:ProjectViewProjectNode" />
+              <item name="register_form" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="logInComponent" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -314,12 +312,12 @@
       <workItem from="1545461587468" duration="4584000" />
       <workItem from="1546847281694" duration="5095000" />
       <workItem from="1546926330052" duration="43348000" />
-      <workItem from="1547897753661" duration="62974000" />
+      <workItem from="1547897753661" duration="63402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179532000" />
+    <option name="totallyTimeSpent" value="179960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1061,20 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/registrationComponent/RegistrationForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#2201#3386#0" expanded="false" />
-            <marker date="1549185676579" expanded="true" signature="2240:2463" ph="..." />
-            <marker date="1549185676579" expanded="true" signature="2622:2638" ph="..." />
-            <marker date="1549185676579" expanded="true" signature="2817:3216" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/logInComponent/Login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1097,6 +1081,20 @@
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/registrationComponent/RegistrationForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="76" column="19" lean-forward="true" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#2201#3386#0" expanded="false" />
+            <marker date="1549185676579" expanded="true" signature="2240:2463" ph="..." />
+            <marker date="1549185676579" expanded="true" signature="2622:2638" ph="..." />
+            <marker date="1549185676579" expanded="true" signature="2817:3216" ph="..." />
           </folding>
         </state>
       </provider>
