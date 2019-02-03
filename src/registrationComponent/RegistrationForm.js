@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import "./registration.css"
-const Swal = require('sweetalert2')
 
+const Swal = require('sweetalert2');
 const url = "http://46.101.236.211:1234/";
-
 
 class RegistrationForm extends Component {
 
@@ -70,7 +69,8 @@ class RegistrationForm extends Component {
                     'text-align: center;\n' +
                     'color: #FFFFFF; background: #32B482;\n' +
                     'border-radius: 20px; width: 41%; height: 80%; border: none; min-height: 80px;' +
-                    ' max-height: 80px;">Вернуться на главную страницу</button>',
+                    ' max-height: 80px;"><a href = "https://neobis.kg" style="text-decoration: none; ' +
+                    'color: #FFFFFF; font-weight: 600;">Вернуться на главную страницу</a></button>',
                     width: 900,
                     height: 500,
                     showConfirmButton: false
@@ -220,7 +220,6 @@ class RegistrationForm extends Component {
     }
 }
 
-
 fetch(url + 'registration/values/', {
     method: 'GET'
 }).then((data) => {
@@ -249,6 +248,5 @@ fetch(url + 'registration/values/', {
     }));
     else alert("Ошибка при получении данных");
 });
-
 
 export default RegistrationForm;
