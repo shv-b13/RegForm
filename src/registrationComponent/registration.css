@@ -43,7 +43,7 @@ select{
     padding-left: 5%;
     color: white;
 }
-button{
+.register{
     position: absolute;
     width: 26.8%;
     height: 7%;
@@ -98,7 +98,7 @@ textarea{
     .inputA{
         top: 16.5%;
     }
-    button{
+    .register{
         font-size: 16px;
     }
     input{
@@ -113,7 +113,7 @@ textarea{
     .inputA{
         top: 16%;
     }
-    button{
+    .register{
         font-size: 14px;
     }
     input{
@@ -137,7 +137,7 @@ textarea{
     .text{
         font-size: 9px;
     }
-    button{
+    .register{
         font-size: 12px;
     }
     .hobby{
@@ -161,7 +161,7 @@ textarea{
         padding-top: 2px;
         border-radius: 3px;
     }
-    button{
+    .register{
         font-size: 5px;
     }
     select{
@@ -190,5 +190,4 @@ textarea{
         }
     }
 }
-
 

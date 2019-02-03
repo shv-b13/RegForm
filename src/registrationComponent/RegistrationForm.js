@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./registration.css"
+const Swal = require('sweetalert2')
 
 const url = "http://46.101.236.211:1234/";
 
@@ -54,8 +55,27 @@ class RegistrationForm extends Component {
             method: 'POST', // or 'PUT'
             body: postt, // data can be `string` or {object}!
         }).then((e)=>{
-            if(e.ok) alert(`Форма успешно отправленна ^_^`);
-            else alert("Ошибка при отправке", e)
+                if(e.ok) Swal.fire({
+                    html: '<p style="font-family: Raleway;\n' +
+                    'font-weight: 600;\n' +
+                    'font-size: 24px;\n' +
+                    'text-align: center;\n' +
+                    '\n' +
+                    'color: #000000;">Ваша заявка успешно отправлена, вам будет отправлено письмо на ваш электронный адрес, благодарим вас за ожидание!</p>' +
+                    '</br><p style="font-size: 24px;">' +
+                    'Подпишитесь на нас в социальных сетях </br> FB: fb.com/neobis.clubs </br> Instagram: ig.com/neobis</p></br></br>' +
+                    '<button style="font-family: Raleway;font-style: normal;'+
+                    'font-weight: 600; line-height: normal;' +
+                    'font-size: 100%;\n' +
+                    'text-align: center;\n' +
+                    'color: #FFFFFF; background: #32B482;\n' +
+                    'border-radius: 20px; width: 41%; height: 80%; border: none; min-height: 80px;' +
+                    ' max-height: 80px;">Вернуться на главную страницу</button>',
+                    width: 900,
+                    height: 500,
+                    showConfirmButton: false
+                });
+            else alert("Ошибка при отправке", e);
         });
     }
 
@@ -193,7 +213,7 @@ class RegistrationForm extends Component {
                     </div>
                 </div>
 
-                <button>Зарегистрироваться</button>
+                <button className="register">Зарегистрироваться</button>
 
             </form>
         );
